@@ -3,13 +3,14 @@ class CustomVocabulary:
     to create custom vocabularies. CustomVocabulary objects
     can be used in the various api clients."""
 
-    def __init__(self, phrases):
+    def __init__(self, phrases, metadata=None):
         """Constructor
 
         :param phrases: list of strings of custom phrases to be recognized in
                         submitted audio
         """
         self.phrases = [phrase for phrase in phrases]
+        self.metadata = metadata
 
     def to_dict(self):
         """Returns the raw form of the custom vocabularies as the api
